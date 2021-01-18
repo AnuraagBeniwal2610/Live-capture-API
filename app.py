@@ -12,8 +12,8 @@ def capture():
 	result = True
 	while(result):
 		ret,frame = videoCaptureObject.read()
-		img_str = cv2.imencode('.jpg', frame)[1].tobytes()
-		s3.Object('livecapture-image','NewPicture.jpg').put(Body = img_str)
+		#img_str = cv2.imencode('.jpg', frame)[1].tobytes()
+		#s3.Object('livecapture-image','NewPicture.jpg').put(Body = img_str)
 		result = False
 	videoCaptureObject.release()
 	cv2.destroyAllWindows()
