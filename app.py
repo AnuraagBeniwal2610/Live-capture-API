@@ -20,6 +20,7 @@ def capture():
 	cv2.destroyAllWindows()
 	return "Image Captured and Uploaded to livecapture-image S3 Bucket"
 
-app.run(debug=True)
+if __name__ == "__main__":
+	app.run(debug=True)
 
 
