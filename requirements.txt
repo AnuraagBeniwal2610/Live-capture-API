@@ -3,6 +3,6 @@ Flask-RESTful
 Flask-JWT
 Flask-SQLAlchemy
 cmake
-cv2
+opencv-python
 boto3
 uwsgi
