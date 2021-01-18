@@ -12,7 +12,6 @@ def capture():
 	result = True
 	while(result):
 		ret,frame = videoCaptureObject.read()
-		cv2.imwrite("NewPicture.jpg",frame)
 		img_str = cv2.imencode('.jpg', frame)[1].tobytes()
 		s3.Object('livecapture-image','NewPicture.jpg').put(Body = img_str)
 		result = False
