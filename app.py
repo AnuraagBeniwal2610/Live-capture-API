@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/LiveCapture', methods=['POST'])
 def capture():
 	s3 = boto3.resource("s3")
-	videoCaptureObject = cv2.VideoCapture(-1)
+	videoCaptureObject = cv2.VideoCapture(0)
 	result = True
 	while(result):
 		ret,frame = videoCaptureObject.read()
