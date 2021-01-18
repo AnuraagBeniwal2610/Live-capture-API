@@ -2,4 +2,7 @@ Flask
 Flask-RESTful
 Flask-JWT
 Flask-SQLAlchemy
+cmake
+cv2
+boto3
 uwsgi
