@@ -1,0 +1,25 @@
+<!doctype html>
+
+<head>
+	<title>Save image to local storage</title>
+</head>
+
+<body>
+	<h1>Save images to local storage</h1>
+	<input type="file" name="myFileInput">
+
+	<script>
+		document.querySelector("#myFileInput").addEventListener("change", function () {
+			const reader = new FileReader();
+
+			reader.addEventListener("load", () => {
+				console.log(reader.results);
+
+			});
+
+			reader.readAsDataURL(this.file[0]);
+			
+		});
+	</script>
+	
+</body>
